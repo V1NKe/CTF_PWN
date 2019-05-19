@@ -1,0 +1,59 @@
+PWN
+常用工具：
+     PWN的伪代码一般很简洁
+     关注目标函数即可
+     gets(&buf)
+     scanf
+     strcpy
+     strcat
+-----------------以上，没有长度校验
+
+GDBpeda:
+常用工具：
+     checksec：检查程序使用的保护机制
+     elfsymbol：查看程序中的plt信息
+     vmmap：查看内存映射
+     find/searchmem：在内存中查找特定字符串
+
+ROP:
+     puts(puts_got)
+     ROPgadget1 : pop rdi;ret    (ROPgadget --binary file)
+     p64(pop_rdi)+p64(puts_got)+p64(puts_plt)
+
+
+测试偏移，控制跳转地址
+泄漏函数地址
+替换got表
+调用system函数
+
+pattern create 100 (shellcode)
+pattern offset (AA0A)
+
+
+查看got表中函数的位置方法：
+    1. readelf -r target_elf
+    2. objdump -R target_elf
+
+
+read(int fd, void *buf, size_t count) 返回读取字节数,若fd=0，则为用户输入，若没有达到指定长度，则返回实际长度，下次返回0
+
+x/（数字）a或x  0x···    查看地址中内存情况，a可查看函数名称
+
+64位8位 32位4位
+
+
+基本rop，int80系统调用修改寄存器的值：
+查找寄存器exa：ROPgadget —-binary file_name —-only ‘pop|ret’ | grep ‘eax’
+查找int80: ROPgadget —-binary file_name —-only ‘int’
+查找/bin/sh: ROPgadget —-binary file_name —-string ‘/bin/sh’
+所利用的系统调用：execve("/bin/sh",NULL,NULL)
+其中，该程序是32位，所以我们需要使得：
+系统调用号即eax应该为0xb
+第一个参数即ebx应该指向/bin/sh的地址，其实执行sh的地址也可以
+第二个参数即ecx应该为0
+第三个参数edx应该为0
+
+溢出调用gets函数，把/bin/sh写入bss段，然后再利用pop_ret把gets的参数弹出，然后再调用system函数，把bss段的中的/bin/sh传入就可以了
+
+
+linux_64与linux_86的区别主要有两点：首先是内存地址的范围由32位变成了64位。但是可以使用的内存地址不能大于0x00007fffffffffff，否则会抛出异常。其次是函数参数的传递方式发生了改变，x86中参数都是保存在栈上,但在x64中的前六个参数依次保存在RDI, RSI, RDX, RCX, R8和 R9中，如果还有更多的参数的话才会保存在栈上。
