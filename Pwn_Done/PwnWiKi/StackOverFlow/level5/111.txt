@@ -1,0 +1,32 @@
+write 0000000000601018
+libc start 
+rbp - 0x80
+
+.text:0000000000400600 loc_400600:                             ; CODE XREF: __libc_csu_init+54↓j
+.text:0000000000400600                 mov     rdx, r13
+.text:0000000000400603                 mov     rsi, r14
+.text:0000000000400606                 mov     edi, r15d
+.text:0000000000400609                 call    qword ptr [r12+rbx*8]
+.text:000000000040060D                 add     rbx, 1
+.text:0000000000400611                 cmp     rbx, rbp
+.text:0000000000400614                 jnz     short loc_400600
+.text:0000000000400616
+.text:0000000000400616 loc_400616:                             ; CODE XREF: __libc_csu_init+34↑j
+.text:0000000000400616                 add     rsp, 8
+.text:000000000040061A                 pop     rbx
+.text:000000000040061B                 pop     rbp
+.text:000000000040061C                 pop     r12
+.text:000000000040061E                 pop     r13
+.text:0000000000400620                 pop     r14
+.text:0000000000400622                 pop     r15
+                                       retn
+
+
+rbx = 0
+rbp = 1
+r12 = write
+
+
+
+pop (rbx,rbp,r12,r13,r14,r15)
+       0,1,write,8,write_got,1,400600

@@ -1,0 +1,15 @@
+ebp 0xffffcfec
+name  0xffffcec0
+ocup  0xffffcec0
+
+xiugai 0xffffd01c   0xffffced8   255 255 277
+
+
+
+con: 0xfff051b7
+ret: 0xfff052cc
+
+
+
+ubuntu-xenial-i386-libc6 (id libc6_2.23-0ubuntu10_i386)
+                             libc6_2.23-0ubuntu10_i386.so

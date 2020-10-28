@@ -1,0 +1,341 @@
+
+bs:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+0000000000400778 <.init>:
+  400778:	48 83 ec 08          	sub    $0x8,%rsp
+  40077c:	48 8b 05 65 18 20 00 	mov    0x201865(%rip),%rax        # 601fe8 <stdout@@GLIBC_2.2.5-0x28>
+  400783:	48 85 c0             	test   %rax,%rax
+  400786:	74 05                	je     40078d <stdout@@GLIBC_2.2.5-0x201883>
+  400788:	e8 6b 00 00 00       	callq  4007f8 <stdout@@GLIBC_2.2.5-0x201818>
+  40078d:	48 83 c4 08          	add    $0x8,%rsp
+  400791:	c3                   	retq   
+
+Disassembly of section .plt:
+
+00000000004007a0 <.plt>:
+  4007a0:	ff 35 ea 17 20 00    	pushq  0x2017ea(%rip)        # 601f90 <stdout@@GLIBC_2.2.5-0x80>
+  4007a6:	ff 25 ec 17 20 00    	jmpq   *0x2017ec(%rip)        # 601f98 <stdout@@GLIBC_2.2.5-0x78>
+  4007ac:	0f 1f 40 00          	nopl   0x0(%rax)
+
+Disassembly of section .plt.got:
+
+00000000004007b0 <.plt.got>:
+  4007b0:	ff 25 ea 17 20 00    	jmpq   *0x2017ea(%rip)        # 601fa0 <stdout@@GLIBC_2.2.5-0x70>
+  4007b6:	66 90                	xchg   %ax,%ax
+  4007b8:	ff 25 ea 17 20 00    	jmpq   *0x2017ea(%rip)        # 601fa8 <stdout@@GLIBC_2.2.5-0x68>
+  4007be:	66 90                	xchg   %ax,%ax
+  4007c0:	ff 25 ea 17 20 00    	jmpq   *0x2017ea(%rip)        # 601fb0 <stdout@@GLIBC_2.2.5-0x60>
+  4007c6:	66 90                	xchg   %ax,%ax
+  4007c8:	ff 25 ea 17 20 00    	jmpq   *0x2017ea(%rip)        # 601fb8 <stdout@@GLIBC_2.2.5-0x58>
+  4007ce:	66 90                	xchg   %ax,%ax
+  4007d0:	ff 25 ea 17 20 00    	jmpq   *0x2017ea(%rip)        # 601fc0 <stdout@@GLIBC_2.2.5-0x50>
+  4007d6:	66 90                	xchg   %ax,%ax
+  4007d8:	ff 25 ea 17 20 00    	jmpq   *0x2017ea(%rip)        # 601fc8 <stdout@@GLIBC_2.2.5-0x48>
+  4007de:	66 90                	xchg   %ax,%ax
+  4007e0:	ff 25 ea 17 20 00    	jmpq   *0x2017ea(%rip)        # 601fd0 <stdout@@GLIBC_2.2.5-0x40>
+  4007e6:	66 90                	xchg   %ax,%ax
+  4007e8:	ff 25 ea 17 20 00    	jmpq   *0x2017ea(%rip)        # 601fd8 <stdout@@GLIBC_2.2.5-0x38>
+  4007ee:	66 90                	xchg   %ax,%ax
+  4007f0:	ff 25 ea 17 20 00    	jmpq   *0x2017ea(%rip)        # 601fe0 <stdout@@GLIBC_2.2.5-0x30>
+  4007f6:	66 90                	xchg   %ax,%ax
+  4007f8:	ff 25 ea 17 20 00    	jmpq   *0x2017ea(%rip)        # 601fe8 <stdout@@GLIBC_2.2.5-0x28>
+  4007fe:	66 90                	xchg   %ax,%ax
+  400800:	ff 25 ea 17 20 00    	jmpq   *0x2017ea(%rip)        # 601ff0 <stdout@@GLIBC_2.2.5-0x20>
+  400806:	66 90                	xchg   %ax,%ax
+  400808:	ff 25 ea 17 20 00    	jmpq   *0x2017ea(%rip)        # 601ff8 <stdout@@GLIBC_2.2.5-0x18>
+  40080e:	66 90                	xchg   %ax,%ax
+
+Disassembly of section .text:
+
+0000000000400810 <.text>:
+  400810:	31 ed                	xor    %ebp,%ebp
+  400812:	49 89 d1             	mov    %rdx,%r9
+  400815:	5e                   	pop    %rsi
+  400816:	48 89 e2             	mov    %rsp,%rdx
+  400819:	48 83 e4 f0          	and    $0xfffffffffffffff0,%rsp
+  40081d:	50                   	push   %rax
+  40081e:	54                   	push   %rsp
+  40081f:	49 c7 c0 10 0c 40 00 	mov    $0x400c10,%r8
+  400826:	48 c7 c1 a0 0b 40 00 	mov    $0x400ba0,%rcx
+  40082d:	48 c7 c7 9d 0a 40 00 	mov    $0x400a9d,%rdi
+  400834:	e8 af ff ff ff       	callq  4007e8 <stdout@@GLIBC_2.2.5-0x201828>
+  400839:	f4                   	hlt    
+  40083a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+  400840:	b8 17 20 60 00       	mov    $0x602017,%eax
+  400845:	55                   	push   %rbp
+  400846:	48 2d 10 20 60 00    	sub    $0x602010,%rax
+  40084c:	48 83 f8 0e          	cmp    $0xe,%rax
+  400850:	48 89 e5             	mov    %rsp,%rbp
+  400853:	76 1b                	jbe    400870 <stdout@@GLIBC_2.2.5-0x2017a0>
+  400855:	b8 00 00 00 00       	mov    $0x0,%eax
+  40085a:	48 85 c0             	test   %rax,%rax
+  40085d:	74 11                	je     400870 <stdout@@GLIBC_2.2.5-0x2017a0>
+  40085f:	5d                   	pop    %rbp
+  400860:	bf 10 20 60 00       	mov    $0x602010,%edi
+  400865:	ff e0                	jmpq   *%rax
+  400867:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  40086e:	00 00 
+  400870:	5d                   	pop    %rbp
+  400871:	c3                   	retq   
+  400872:	0f 1f 40 00          	nopl   0x0(%rax)
+  400876:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  40087d:	00 00 00 
+  400880:	be 10 20 60 00       	mov    $0x602010,%esi
+  400885:	55                   	push   %rbp
+  400886:	48 81 ee 10 20 60 00 	sub    $0x602010,%rsi
+  40088d:	48 c1 fe 03          	sar    $0x3,%rsi
+  400891:	48 89 e5             	mov    %rsp,%rbp
+  400894:	48 89 f0             	mov    %rsi,%rax
+  400897:	48 c1 e8 3f          	shr    $0x3f,%rax
+  40089b:	48 01 c6             	add    %rax,%rsi
+  40089e:	48 d1 fe             	sar    %rsi
+  4008a1:	74 15                	je     4008b8 <stdout@@GLIBC_2.2.5-0x201758>
+  4008a3:	b8 00 00 00 00       	mov    $0x0,%eax
+  4008a8:	48 85 c0             	test   %rax,%rax
+  4008ab:	74 0b                	je     4008b8 <stdout@@GLIBC_2.2.5-0x201758>
+  4008ad:	5d                   	pop    %rbp
+  4008ae:	bf 10 20 60 00       	mov    $0x602010,%edi
+  4008b3:	ff e0                	jmpq   *%rax
+  4008b5:	0f 1f 00             	nopl   (%rax)
+  4008b8:	5d                   	pop    %rbp
+  4008b9:	c3                   	retq   
+  4008ba:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+  4008c0:	80 3d 61 17 20 00 00 	cmpb   $0x0,0x201761(%rip)        # 602028 <stdin@@GLIBC_2.2.5+0x8>
+  4008c7:	75 11                	jne    4008da <stdout@@GLIBC_2.2.5-0x201736>
+  4008c9:	55                   	push   %rbp
+  4008ca:	48 89 e5             	mov    %rsp,%rbp
+  4008cd:	e8 6e ff ff ff       	callq  400840 <stdout@@GLIBC_2.2.5-0x2017d0>
+  4008d2:	5d                   	pop    %rbp
+  4008d3:	c6 05 4e 17 20 00 01 	movb   $0x1,0x20174e(%rip)        # 602028 <stdin@@GLIBC_2.2.5+0x8>
+  4008da:	f3 c3                	repz retq 
+  4008dc:	0f 1f 40 00          	nopl   0x0(%rax)
+  4008e0:	bf b0 1d 60 00       	mov    $0x601db0,%edi
+  4008e5:	48 83 3f 00          	cmpq   $0x0,(%rdi)
+  4008e9:	75 05                	jne    4008f0 <stdout@@GLIBC_2.2.5-0x201720>
+  4008eb:	eb 93                	jmp    400880 <stdout@@GLIBC_2.2.5-0x201790>
+  4008ed:	0f 1f 00             	nopl   (%rax)
+  4008f0:	b8 00 00 00 00       	mov    $0x0,%eax
+  4008f5:	48 85 c0             	test   %rax,%rax
+  4008f8:	74 f1                	je     4008eb <stdout@@GLIBC_2.2.5-0x201725>
+  4008fa:	55                   	push   %rbp
+  4008fb:	48 89 e5             	mov    %rsp,%rbp
+  4008fe:	ff d0                	callq  *%rax
+  400900:	5d                   	pop    %rbp
+  400901:	e9 7a ff ff ff       	jmpq   400880 <stdout@@GLIBC_2.2.5-0x201790>
+  400906:	55                   	push   %rbp
+  400907:	48 89 e5             	mov    %rsp,%rbp
+  40090a:	48 83 ec 10          	sub    $0x10,%rsp
+  40090e:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+  400915:	00 00 
+  400917:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+  40091b:	31 c0                	xor    %eax,%eax
+  40091d:	48 8b 15 fc 16 20 00 	mov    0x2016fc(%rip),%rdx        # 602020 <stdin@@GLIBC_2.2.5>
+  400924:	48 8d 45 f0          	lea    -0x10(%rbp),%rax
+  400928:	be 08 00 00 00       	mov    $0x8,%esi
+  40092d:	48 89 c7             	mov    %rax,%rdi
+  400930:	e8 bb fe ff ff       	callq  4007f0 <stdout@@GLIBC_2.2.5-0x201820>
+  400935:	48 8d 45 f0          	lea    -0x10(%rbp),%rax
+  400939:	48 89 c7             	mov    %rax,%rdi
+  40093c:	e8 bf fe ff ff       	callq  400800 <stdout@@GLIBC_2.2.5-0x201810>
+  400941:	48 8b 4d f8          	mov    -0x8(%rbp),%rcx
+  400945:	64 48 33 0c 25 28 00 	xor    %fs:0x28,%rcx
+  40094c:	00 00 
+  40094e:	74 05                	je     400955 <stdout@@GLIBC_2.2.5-0x2016bb>
+  400950:	e8 73 fe ff ff       	callq  4007c8 <stdout@@GLIBC_2.2.5-0x201848>
+  400955:	c9                   	leaveq 
+  400956:	c3                   	retq   
+  400957:	55                   	push   %rbp
+  400958:	48 89 e5             	mov    %rsp,%rbp
+  40095b:	48 83 ec 30          	sub    $0x30,%rsp
+  40095f:	89 7d ec             	mov    %edi,-0x14(%rbp)
+  400962:	48 89 75 e0          	mov    %rsi,-0x20(%rbp)
+  400966:	48 89 55 d8          	mov    %rdx,-0x28(%rbp)
+  40096a:	48 c7 45 f0 00 00 00 	movq   $0x0,-0x10(%rbp)
+  400971:	00 
+  400972:	eb 60                	jmp    4009d4 <stdout@@GLIBC_2.2.5-0x20163c>
+  400974:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400978:	48 2b 45 f0          	sub    -0x10(%rbp),%rax
+  40097c:	48 89 c2             	mov    %rax,%rdx
+  40097f:	48 8b 4d e0          	mov    -0x20(%rbp),%rcx
+  400983:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+  400987:	48 01 c1             	add    %rax,%rcx
+  40098a:	8b 45 ec             	mov    -0x14(%rbp),%eax
+  40098d:	48 89 ce             	mov    %rcx,%rsi
+  400990:	89 c7                	mov    %eax,%edi
+  400992:	e8 49 fe ff ff       	callq  4007e0 <stdout@@GLIBC_2.2.5-0x201830>
+  400997:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+  40099b:	48 83 7d f8 ff       	cmpq   $0xffffffffffffffff,-0x8(%rbp)
+  4009a0:	75 23                	jne    4009c5 <stdout@@GLIBC_2.2.5-0x20164b>
+  4009a2:	e8 11 fe ff ff       	callq  4007b8 <stdout@@GLIBC_2.2.5-0x201858>
+  4009a7:	8b 00                	mov    (%rax),%eax
+  4009a9:	83 f8 0b             	cmp    $0xb,%eax
+  4009ac:	74 26                	je     4009d4 <stdout@@GLIBC_2.2.5-0x20163c>
+  4009ae:	e8 05 fe ff ff       	callq  4007b8 <stdout@@GLIBC_2.2.5-0x201858>
+  4009b3:	8b 00                	mov    (%rax),%eax
+  4009b5:	83 f8 04             	cmp    $0x4,%eax
+  4009b8:	75 02                	jne    4009bc <stdout@@GLIBC_2.2.5-0x201654>
+  4009ba:	eb 18                	jmp    4009d4 <stdout@@GLIBC_2.2.5-0x20163c>
+  4009bc:	48 c7 c0 ff ff ff ff 	mov    $0xffffffffffffffff,%rax
+  4009c3:	eb 20                	jmp    4009e5 <stdout@@GLIBC_2.2.5-0x20162b>
+  4009c5:	48 83 7d f8 00       	cmpq   $0x0,-0x8(%rbp)
+  4009ca:	74 14                	je     4009e0 <stdout@@GLIBC_2.2.5-0x201630>
+  4009cc:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  4009d0:	48 01 45 f0          	add    %rax,-0x10(%rbp)
+  4009d4:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+  4009d8:	48 3b 45 d8          	cmp    -0x28(%rbp),%rax
+  4009dc:	72 96                	jb     400974 <stdout@@GLIBC_2.2.5-0x20169c>
+  4009de:	eb 01                	jmp    4009e1 <stdout@@GLIBC_2.2.5-0x20162f>
+  4009e0:	90                   	nop
+  4009e1:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+  4009e5:	c9                   	leaveq 
+  4009e6:	c3                   	retq   
+  4009e7:	55                   	push   %rbp
+  4009e8:	48 89 e5             	mov    %rsp,%rbp
+  4009eb:	48 81 ec 20 10 00 00 	sub    $0x1020,%rsp
+  4009f2:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+  4009f9:	00 00 
+  4009fb:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+  4009ff:	31 c0                	xor    %eax,%eax
+  400a01:	48 8d 85 f0 ef ff ff 	lea    -0x1010(%rbp),%rax
+  400a08:	ba 00 10 00 00       	mov    $0x1000,%edx
+  400a0d:	be 00 00 00 00       	mov    $0x0,%esi
+  400a12:	48 89 c7             	mov    %rax,%rdi
+  400a15:	e8 be fd ff ff       	callq  4007d8 <stdout@@GLIBC_2.2.5-0x201838>
+  400a1a:	bf 28 0c 40 00       	mov    $0x400c28,%edi
+  400a1f:	e8 9c fd ff ff       	callq  4007c0 <stdout@@GLIBC_2.2.5-0x201850>
+  400a24:	bf 48 0c 40 00       	mov    $0x400c48,%edi
+  400a29:	e8 92 fd ff ff       	callq  4007c0 <stdout@@GLIBC_2.2.5-0x201850>
+  400a2e:	b8 00 00 00 00       	mov    $0x0,%eax
+  400a33:	e8 ce fe ff ff       	callq  400906 <stdout@@GLIBC_2.2.5-0x20170a>
+  400a38:	48 89 85 e8 ef ff ff 	mov    %rax,-0x1018(%rbp)
+  400a3f:	48 81 bd e8 ef ff ff 	cmpq   $0x10000,-0x1018(%rbp)
+  400a46:	00 00 01 00 
+  400a4a:	76 11                	jbe    400a5d <stdout@@GLIBC_2.2.5-0x2015b3>
+  400a4c:	bf 6c 0c 40 00       	mov    $0x400c6c,%edi
+  400a51:	e8 6a fd ff ff       	callq  4007c0 <stdout@@GLIBC_2.2.5-0x201850>
+  400a56:	b8 00 00 00 00       	mov    $0x0,%eax
+  400a5b:	eb 2a                	jmp    400a87 <stdout@@GLIBC_2.2.5-0x201589>
+  400a5d:	48 8b 95 e8 ef ff ff 	mov    -0x1018(%rbp),%rdx
+  400a64:	48 8d 85 f0 ef ff ff 	lea    -0x1010(%rbp),%rax
+  400a6b:	48 89 c6             	mov    %rax,%rsi
+  400a6e:	bf 00 00 00 00       	mov    $0x0,%edi
+  400a73:	e8 df fe ff ff       	callq  400957 <stdout@@GLIBC_2.2.5-0x2016b9>
+  400a78:	bf 7c 0c 40 00       	mov    $0x400c7c,%edi
+  400a7d:	e8 3e fd ff ff       	callq  4007c0 <stdout@@GLIBC_2.2.5-0x201850>
+  400a82:	b8 00 00 00 00       	mov    $0x0,%eax
+  400a87:	48 8b 4d f8          	mov    -0x8(%rbp),%rcx
+  400a8b:	64 48 33 0c 25 28 00 	xor    %fs:0x28,%rcx
+  400a92:	00 00 
+  400a94:	74 05                	je     400a9b <stdout@@GLIBC_2.2.5-0x201575>
+  400a96:	e8 2d fd ff ff       	callq  4007c8 <stdout@@GLIBC_2.2.5-0x201848>
+  400a9b:	c9                   	leaveq 
+  400a9c:	c3                   	retq   
+  400a9d:	55                   	push   %rbp
+  400a9e:	48 89 e5             	mov    %rsp,%rbp
+  400aa1:	48 83 ec 10          	sub    $0x10,%rsp
+  400aa5:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+  400aac:	00 00 
+  400aae:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+  400ab2:	31 c0                	xor    %eax,%eax
+  400ab4:	48 8b 05 65 15 20 00 	mov    0x201565(%rip),%rax        # 602020 <stdin@@GLIBC_2.2.5>
+  400abb:	be 00 00 00 00       	mov    $0x0,%esi
+  400ac0:	48 89 c7             	mov    %rax,%rdi
+  400ac3:	e8 08 fd ff ff       	callq  4007d0 <stdout@@GLIBC_2.2.5-0x201840>
+  400ac8:	48 8b 05 41 15 20 00 	mov    0x201541(%rip),%rax        # 602010 <stdout@@GLIBC_2.2.5>
+  400acf:	be 00 00 00 00       	mov    $0x0,%esi
+  400ad4:	48 89 c7             	mov    %rax,%rdi
+  400ad7:	e8 f4 fc ff ff       	callq  4007d0 <stdout@@GLIBC_2.2.5-0x201840>
+  400adc:	bf 96 0c 40 00       	mov    $0x400c96,%edi
+  400ae1:	e8 da fc ff ff       	callq  4007c0 <stdout@@GLIBC_2.2.5-0x201850>
+  400ae6:	bf 98 0c 40 00       	mov    $0x400c98,%edi
+  400aeb:	e8 d0 fc ff ff       	callq  4007c0 <stdout@@GLIBC_2.2.5-0x201850>
+  400af0:	bf b8 0c 40 00       	mov    $0x400cb8,%edi
+  400af5:	e8 c6 fc ff ff       	callq  4007c0 <stdout@@GLIBC_2.2.5-0x201850>
+  400afa:	bf d8 0c 40 00       	mov    $0x400cd8,%edi
+  400aff:	e8 bc fc ff ff       	callq  4007c0 <stdout@@GLIBC_2.2.5-0x201850>
+  400b04:	bf f7 0c 40 00       	mov    $0x400cf7,%edi
+  400b09:	e8 b2 fc ff ff       	callq  4007c0 <stdout@@GLIBC_2.2.5-0x201850>
+  400b0e:	bf 12 0d 40 00       	mov    $0x400d12,%edi
+  400b13:	e8 a8 fc ff ff       	callq  4007c0 <stdout@@GLIBC_2.2.5-0x201850>
+  400b18:	bf 2d 0d 40 00       	mov    $0x400d2d,%edi
+  400b1d:	e8 9e fc ff ff       	callq  4007c0 <stdout@@GLIBC_2.2.5-0x201850>
+  400b22:	bf 96 0c 40 00       	mov    $0x400c96,%edi
+  400b27:	e8 94 fc ff ff       	callq  4007c0 <stdout@@GLIBC_2.2.5-0x201850>
+  400b2c:	48 8d 45 f0          	lea    -0x10(%rbp),%rax
+  400b30:	b9 00 00 00 00       	mov    $0x0,%ecx
+  400b35:	ba e7 09 40 00       	mov    $0x4009e7,%edx
+  400b3a:	be 00 00 00 00       	mov    $0x0,%esi
+  400b3f:	48 89 c7             	mov    %rax,%rdi
+  400b42:	e8 69 fc ff ff       	callq  4007b0 <stdout@@GLIBC_2.2.5-0x201860>
+  400b47:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+  400b4b:	be 00 00 00 00       	mov    $0x0,%esi
+  400b50:	48 89 c7             	mov    %rax,%rdi
+  400b53:	e8 b0 fc ff ff       	callq  400808 <stdout@@GLIBC_2.2.5-0x201808>
+  400b58:	85 c0                	test   %eax,%eax
+  400b5a:	74 11                	je     400b6d <stdout@@GLIBC_2.2.5-0x2014a3>
+  400b5c:	bf 48 0d 40 00       	mov    $0x400d48,%edi
+  400b61:	e8 5a fc ff ff       	callq  4007c0 <stdout@@GLIBC_2.2.5-0x201850>
+  400b66:	b8 01 00 00 00       	mov    $0x1,%eax
+  400b6b:	eb 0f                	jmp    400b7c <stdout@@GLIBC_2.2.5-0x201494>
+  400b6d:	bf 55 0d 40 00       	mov    $0x400d55,%edi
+  400b72:	e8 49 fc ff ff       	callq  4007c0 <stdout@@GLIBC_2.2.5-0x201850>
+  400b77:	b8 00 00 00 00       	mov    $0x0,%eax
+  400b7c:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
+  400b80:	64 48 33 14 25 28 00 	xor    %fs:0x28,%rdx
+  400b87:	00 00 
+  400b89:	74 05                	je     400b90 <stdout@@GLIBC_2.2.5-0x201480>
+  400b8b:	e8 38 fc ff ff       	callq  4007c8 <stdout@@GLIBC_2.2.5-0x201848>
+  400b90:	c9                   	leaveq 
+  400b91:	c3                   	retq   
+  400b92:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  400b99:	00 00 00 
+  400b9c:	0f 1f 40 00          	nopl   0x0(%rax)
+  400ba0:	41 57                	push   %r15
+  400ba2:	41 56                	push   %r14
+  400ba4:	41 89 ff             	mov    %edi,%r15d
+  400ba7:	41 55                	push   %r13
+  400ba9:	41 54                	push   %r12
+  400bab:	4c 8d 25 ee 11 20 00 	lea    0x2011ee(%rip),%r12        # 601da0 <stdout@@GLIBC_2.2.5-0x270>
+  400bb2:	55                   	push   %rbp
+  400bb3:	48 8d 2d ee 11 20 00 	lea    0x2011ee(%rip),%rbp        # 601da8 <stdout@@GLIBC_2.2.5-0x268>
+  400bba:	53                   	push   %rbx
+  400bbb:	49 89 f6             	mov    %rsi,%r14
+  400bbe:	49 89 d5             	mov    %rdx,%r13
+  400bc1:	4c 29 e5             	sub    %r12,%rbp
+  400bc4:	48 83 ec 08          	sub    $0x8,%rsp
+  400bc8:	48 c1 fd 03          	sar    $0x3,%rbp
+  400bcc:	e8 a7 fb ff ff       	callq  400778 <stdout@@GLIBC_2.2.5-0x201898>
+  400bd1:	48 85 ed             	test   %rbp,%rbp
+  400bd4:	74 20                	je     400bf6 <stdout@@GLIBC_2.2.5-0x20141a>
+  400bd6:	31 db                	xor    %ebx,%ebx
+  400bd8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+  400bdf:	00 
+  400be0:	4c 89 ea             	mov    %r13,%rdx
+  400be3:	4c 89 f6             	mov    %r14,%rsi
+  400be6:	44 89 ff             	mov    %r15d,%edi
+  400be9:	41 ff 14 dc          	callq  *(%r12,%rbx,8)
+  400bed:	48 83 c3 01          	add    $0x1,%rbx
+  400bf1:	48 39 eb             	cmp    %rbp,%rbx
+  400bf4:	75 ea                	jne    400be0 <stdout@@GLIBC_2.2.5-0x201430>
+  400bf6:	48 83 c4 08          	add    $0x8,%rsp
+  400bfa:	5b                   	pop    %rbx
+  400bfb:	5d                   	pop    %rbp
+  400bfc:	41 5c                	pop    %r12
+  400bfe:	41 5d                	pop    %r13
+  400c00:	41 5e                	pop    %r14
+  400c02:	41 5f                	pop    %r15
+  400c04:	c3                   	retq   
+  400c05:	90                   	nop
+  400c06:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  400c0d:	00 00 00 
+  400c10:	f3 c3                	repz retq 
+
+Disassembly of section .fini:
+
+0000000000400c14 <.fini>:
+  400c14:	48 83 ec 08          	sub    $0x8,%rsp
+  400c18:	48 83 c4 08          	add    $0x8,%rsp
+  400c1c:	c3                   	retq   
