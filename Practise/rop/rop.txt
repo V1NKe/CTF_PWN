@@ -1,9 +1,0 @@
-eax 0x080bb196
-ebx 0x0806eb91     pop ecx ; pop ebx ; ret
-ecx 
-edx 0x0806eb6a
-
-bin 0x080be408
-int 0x08049421
-
-112

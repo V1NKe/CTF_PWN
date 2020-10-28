@@ -1,4 +1,0 @@
-ebx 0x0804843d
-getplt 0x08048460
-sysplt 0x08048490
-buf 0x0804A080

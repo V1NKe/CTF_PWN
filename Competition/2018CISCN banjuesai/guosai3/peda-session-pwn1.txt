@@ -1,5 +1,0 @@
-break *0x40085c
-break *0x4009C7
-break *0x4008FB
-break *0x40096A
-
