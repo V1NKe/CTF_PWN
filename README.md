@@ -26,6 +26,7 @@
 
   - ARM-Pwn
   - house of orange+IO_FILE
+  - __printf_arginfo_table
   - ret2libc
   - ret2reslove
   - ROP
